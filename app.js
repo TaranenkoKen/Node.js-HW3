@@ -30,8 +30,6 @@ app.use(express.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.use('/announcements', announcementsRouter);
-
 app.use(celebrateErrors());
 
 // Our routes would go here, for example:
