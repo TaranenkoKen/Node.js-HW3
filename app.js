@@ -30,10 +30,10 @@ app.use(express.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.use(celebrateErrors());
-
 // Our routes would go here, for example:
 app.use('/announcements', announcementsRouter);
+
+app.use(celebrateErrors());
 
 // 404 Not Found handler - must be after all routes
 app.use((req, res) => {
